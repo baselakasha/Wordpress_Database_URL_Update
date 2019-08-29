@@ -1,0 +1,7 @@
+UPDATE wp_options SET option_value = replace(option_value, 'OLD_URL', 'NEW_URL') WHERE option_name = 'home' OR option_name = 'siteurl'; 
+UPDATE wp_posts SET post_content = replace(post_content, 'OLD_URL', 'NEW_URL');
+UPDATE wp_postmeta SET meta_value = replace(meta_value,'OLD_URL','NEW_URL');
+UPDATE wp_usermeta SET meta_value = replace(meta_value, 'OLD_URL','NEW_URL'); 
+UPDATE wp_links SET link_url = replace(link_url, 'OLD_URL','NEW_URL');
+UPDATE wp_comments SET comment_content = replace(comment_content , 'OLD_URL','NEW_URL');
+UPDATE wp_posts SET guid = replace(guid, 'OLD_URL','NEW_URL');
